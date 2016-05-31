@@ -27,4 +27,16 @@ public class Controller {
         if(event.getCode() == KeyCode.ENTER);
         onGo();
     }
+
+    public void onBack(){
+        try {
+            view.getEngine().getHistory().go(-1);
+        }catch (Exception e){}
+    }
+
+    public void onForward(){
+        try {
+            view.getEngine().getHistory().go(1);
+        } catch (Exception e) {}
+    }
 }
